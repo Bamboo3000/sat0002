@@ -1,0 +1,14 @@
+.header {
+
+    &__main {
+        display: flex;
+
+        .col {
+            flex-basis: 50%;
+            width: 50vw;
+            height: 50vw;
+        }
+
+    }
+
+}

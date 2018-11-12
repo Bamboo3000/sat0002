@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>sative</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="wrapper">
+<header class="navigation">
+    <div class="container-fluid">
+        <nav class="navigation__container">
+            <a href="index.html" class="logo">
+                <object type="image/svg+xml" data="assets/img/logo.svg">
+                    <img src="assets/img/logo.png" alt="Sative logo">
+                </object>
+            </a>
+            <ul class="navigation__menu">
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="work.html">Work</a>
+                </li>
+                <li>
+                    <a href="news.html">News</a>
+                </li>
+                <li>
+                    <a href="testimonials.html">Testimonials</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<header class="header__main">
+    <div class="col bg-black"></div>
+    <div class="col">
+            <h1>Something about the agency.</h1>
+            <h2>Some other text</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium debitis quos explicabo doloremque rem praesentium sit placeat magnam culpa quo at sint suscipit officia omnis quidem harum, modi ullam dolorum?</p>
+    </div>
+</header>
+<section class="section__about">
+    <div class="container">
+
+    </div>
+</section>
+            <footer class="footer">
+                
+            </footer>
+        </div>
+        <script src="assets/js/app.js" defer></script>
+        <noscript id="deferred-styles">
+            <link rel="stylesheet" href="assets/css/prototype.css">
+            <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto+Slab:300,400,700|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        </noscript>
+        <script defer>
+            var loadDeferredStyles=function(){var e=document.getElementById("deferred-styles"),n=document.createElement("div");n.innerHTML=e.textContent,document.body.appendChild(n),e.parentElement.removeChild(e)},raf=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;raf?raf(function(){window.setTimeout(loadDeferredStyles,0)}):window.addEventListener("load",loadDeferredStyles);
+    
+            var lazy = [];
+            registerListener('load', setLazy);
+            registerListener('load', lazyLoad);
+            registerListener('scroll', lazyLoad);
+            registerListener('resize', lazyLoad);
+            
+            function setLazy(){
+                lazy = document.getElementsByClassName('lazy');
+            } 
+            function lazyLoad(){
+                for(var i=0; i<lazy.length; i++){
+                    if(isInViewport(lazy[i])){
+                        if (lazy[i].getAttribute('data-src')){
+                            lazy[i].src = lazy[i].getAttribute('data-src');
+                            lazy[i].removeAttribute('data-src');
+                            lazy[i].addEventListener('load', unBlur(lazy[i]));
+                        }
+                    }
+                }
+                cleanLazy();
+            }
+            function unBlur($el) {
+                $el.classList.add('loaded');
+            }
+            function cleanLazy(){
+                lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');});
+            }
+            function isInViewport(el){
+                var rect = el.getBoundingClientRect();
+                
+                return (
+                    rect.bottom >= 0 && 
+                    rect.right >= 0 && 
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) && 
+                    rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+            function registerListener(event, func) {
+                if (window.addEventListener) {
+                    window.addEventListener(event, func)
+                } else {
+                    window.attachEvent('on' + event, func)
+                }
+            }
+    
+        </script>
+    </body>
+</html>
