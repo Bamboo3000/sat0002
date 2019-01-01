@@ -6,7 +6,7 @@ body {
 	font-family: $font-primary;
 	font-weight: 400;
 	font-size: 16px;
-	color: black;
+	color: $color-black;
 	min-height: 100vh;
 	background-color: white;
 }
@@ -84,6 +84,7 @@ section {
 	display: block;
 	overflow: hidden;
 	min-height: 50vh;
+	padding-top: 88px;
 }
 
 .bg-cover {

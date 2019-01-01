@@ -32,7 +32,7 @@ var src = {
     portJs: '../build/themes/sative/assets/js',
     portCss: '../build/themes/sative/assets/css',
     portImg: '../build/themes/sative/assets/img',
-    portFonts: '../build/themes/sative/assets/fonts'
+    portFonts: '../build/themes/sative/assets/fonts',
 };
 
 var production = false;
@@ -66,7 +66,7 @@ gulp.task('build-sass', function() {
         .pipe(autoprefixer('last 10 versions'))
         .pipe(plugins.minifyCss())
         .pipe(gulp.dest(src.buildCss))
-        .pipe(gulp.dest(src.portCss))
+        //.pipe(gulp.dest(src.portCss))
 });
 
 /**
@@ -93,7 +93,7 @@ gulp.task('build-js', function () {
         .pipe(plugins.uglify())
         .pipe(plugins.size())
         .pipe(gulp.dest(src.buildJs))
-        .pipe(gulp.dest(src.portJs))
+        //.pipe(gulp.dest(src.portJs))
 });
 
 /**
@@ -108,7 +108,8 @@ gulp.task('sprite', function () {
     cssName: 'sprite.css'
   }));
   var imgStream = spriteData.img
-    .pipe(gulp.dest(src.buildImg));
+    .pipe(gulp.dest(src.buildImg))
+    //.pipe(gulp.dest(src.portImg));
   var cssStream = spriteData.css
     .pipe(gulp.dest('src/scss/other/'));
 
@@ -121,7 +122,7 @@ gulp.task('sprite', function () {
 gulp.task('build-img', function() {
     return gulp.src([src.img + '/*', src.img + '/**/*'])
         .pipe(gulp.dest(src.buildImg))
-        .pipe(gulp.dest(src.portImg))
+        //.pipe(gulp.dest(src.portImg));
 });
 
 
@@ -132,7 +133,7 @@ gulp.task('build-img', function() {
 gulp.task('build-fonts', function() {
     return gulp.src([src.fonts + '/*', src.fonts + '/**/*'])
         .pipe(gulp.dest(src.buildFonts))
-        .pipe(gulp.dest(src.portFonts))
+        //.pipe(gulp.dest(src.portFonts));
 });
 
 
@@ -167,6 +168,26 @@ gulp.task('watch-html', function () {
 });
 
 /**
+ * Task: Individually Watch Imgs
+ */
+gulp.task('watch-img', function () {
+    console.log(hint('\n --------- Watching IMG Files ------------------------------------------->>> \n'));
+    gulp
+    .watch([src.img + '/*.*', src.img + '/**/*.*'], ['build-img'])
+    .once('change', log);
+});
+
+/**
+ * Task: Individually Watch Fonts
+ */
+gulp.task('watch-fonts', function () {
+    console.log(hint('\n --------- Watching Fonts Files ------------------------------------------->>> \n'));
+    gulp
+    .watch([src.fonts + '/*.*', src.fonts + '/**/*.*'], ['build-fonts'])
+    .once('change', log);
+});
+
+/**
  * Task: Clean 
  */
 gulp.task('clean', function () {
@@ -192,4 +213,4 @@ gulp.task('default', ['build']);
 /**
  * Task: Watch all 
  */
-gulp.task('watch', ['watch-js', 'watch-sass', 'watch-html']);
+gulp.task('watch', ['watch-js', 'watch-sass', 'watch-html', 'watch-img', 'watch-fonts']);

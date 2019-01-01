@@ -1,12 +1,12 @@
 .header {
 
     &__main {
+        min-height: calc(100vh - 88px);
+        color: white;
         display: flex;
 
-        .col {
-            flex-basis: 50%;
-            width: 50vw;
-            height: 50vw;
+        &-text {
+            margin: 24px 0 16px;
         }
 
     }

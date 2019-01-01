@@ -1,44 +1,103 @@
 .footer {
-    display: flex;
-    flex-wrap: nowrap;
-    margin: -10px -30px -30px -30px;
+    background-color: $color-primary;
+    padding: 48px 0 0 0;
+    display: block;
+    position: relative;
+    color: white;
 
-    @media(max-width: 1140px) {
-        margin-top: -25px;
-    }
+    &__logo {
 
-    @media(max-width: 900px) {
-        margin: -25px -15px -25px -15px;
-    }
-
-    @media(max-width: 480px) {
-        flex-wrap: wrap;
-        margin: -15px -15px -40px -15px;
-    }
-
-    &__item {
-        flex-basis: 50%;
-        max-width: 50%;
-        padding: 0 30px 15px 30px;
-
-        @media(max-width: 900px) {
-            padding: 0 15px 15px 15px;
+        a {
+            display: block;
+        }
+        
+        object,
+        svg {
+            max-width: 136px;
         }
 
-        @media(max-width: 480px) {
-            flex-basis: 100%;
-            max-width: 100%;
+    }
+
+    &__social {
+
+        a {
+            display: inline-block;
+            margin: 0 2px;
+            background-color: white;
+            border-radius: 100px;
+            height: 28px;
+            width: 28px;
+            text-align: center;
+
+            &:hover {
+                text-decoration: none;
+
+                i {
+                    color: $color-secondary;
+                }
+
+            }
+
         }
 
-        .text-size-small {
-            line-height: 1.8;
-            margin-top: -5px;
+        i {
+            font-size: 18px;
+            line-height: 1;
+            margin: 0 auto;
+            margin: 0;
+            display: inline-block;
+            vertical-align: middle;
+            color: $color-primary;
+            @include trans(200ms);
+
+            &.fa-instagram {
+                font-size: 19px;
+                vertical-align: -4px;
+            }
+
+            &.fa-twitter {
+                vertical-align: -4px;
+            }
+
+        }
+
+    }
+
+    &__info {
+        margin-top: 20px;
+    }
+
+    &__address {
+        line-height: 1.6;
+
+        address {
+            margin: 16px 0 0 0;
         }
 
         a {
-            text-decoration: underline;
+
+            span {
+                font-weight: 700;
+            }
+            
+            &:hover {
+                text-decoration: none;
+                color: white;
+
+                span {
+                    color: $color-secondary;
+                }
+
+            }
+
         }
 
+    }
+
+    &__bottom {
+        margin-top: 32px;
+        padding: 18px 0 20px;
+        background-color: #170e31;
     }
 
 }
