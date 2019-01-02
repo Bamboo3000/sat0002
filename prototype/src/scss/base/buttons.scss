@@ -4,6 +4,11 @@
 	white-space: nowrap;
 	cursor: pointer;
 	transition: all 250ms ease;
+	border-radius: 6px;
+	font-weight: 700;
+	width: auto;
+	height: auto!important;
+	letter-spacing: 0.5px;
 
 	&:hover,
 	&:focus,
@@ -19,16 +24,11 @@
 	}
 
 	&__default {
-		width: auto;
 		margin: 16px auto 0;
 		display: inline-block;
 		padding: 9px 36px 10px!important;
-		height: auto!important;
 		border: 3px solid white;
-		border-radius: 3px;
 		font-size: 18px;
-		font-weight: 700;
-		letter-spacing: 0.5px;
 		color: $color-tertiary;
 		background-color: white;
 
@@ -58,16 +58,11 @@
 	}
 
 	&__colorS {
-		width: auto;
 		margin: 16px auto 0;
 		display: inline-block;
 		padding: 9px 36px 10px!important;
-		height: auto!important;
 		border: 3px solid $color-secondary;
 		font-size: 18px;
-		border-radius: 3px;
-		font-weight: 700;
-		letter-spacing: 0.5px;
 		color: white;
 		background-color: $color-secondary;
 
@@ -85,16 +80,11 @@
 	}
 
 	&__colorT {
-		width: auto;
 		margin: 16px auto 0;
 		display: inline-block;
 		padding: 9px 36px 10px!important;
-		height: auto!important;
 		border: 3px solid $color-tertiary;
 		font-size: 18px;
-		border-radius: 3px;
-		font-weight: 700;
-		letter-spacing: 0.5px;
 		color: white;
 		background-color: $color-tertiary;
 
@@ -112,16 +102,11 @@
 	}
 
 	&__hollow {
-		width: auto;
 		margin: 16px auto 0;
 		display: inline-block;
 		padding: 9px 36px 10px!important;
-		height: auto!important;
 		border: 3px solid $color-tertiary;
 		font-size: 18px;
-		border-radius: 3px;
-		font-weight: 700;
-		letter-spacing: 0.5px;
 		color: $color-tertiary;
 		background-color: transparent;
 

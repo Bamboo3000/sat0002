@@ -48,43 +48,6 @@ function slideTo(el)
 	}, 500);
 }
 
-function subMenuToggle()
-{
-    $('.navigation__menu').find('> ul').find('> li').on('mouseenter', function() {
-        $(this).find('> .sub').stop(true, true).fadeIn(200);
-    });
-    $('.navigation__menu').find('> ul').find('> li').on('mouseleave', function() {
-        $(this).find('> .sub').stop(true, true).fadeOut(200);
-    });
-}
-
-function mobileMenuOpen()
-{
-    $('.container__nav-mobile').find('.menu-open').on('click', function(e) {
-        e.preventDefault();
-        $('.container__nav').addClass('active');
-        $('.container__nav-mobile').addClass('hide');
-        $('.fadeincont').fadeIn(200);
-    });
-}
-
-function mobileMenuClose()
-{
-    $('.container__nav').find('.menu-close').on('click', function(e) {
-        e.preventDefault();
-        $('.container__nav').removeClass('active');
-        $('.container__nav-mobile').removeClass('hide');
-        $('.fadeincont').fadeOut(250);
-    });
-    $('.fadeincont').on('click', function(e) {
-        e.preventDefault();
-        $('.container__nav').removeClass('active');
-        $('.container__nav-mobile').removeClass('hide');
-        $('.fadeincont').fadeOut(200);
-    });
-}
-
-
 function initContactMap()
 {
 	var contact_map = document.getElementById('contact_map');
@@ -296,47 +259,38 @@ function initContactMap()
 	// );
 }
 
-function instafeed()
+function menuScroll()
 {
-    if($('#instafeed').length !== 0) {
-        instafetch.init({
-            accessToken: '3954768309.1677ed0.30788a5d18984b86b98b23a114a6cb4c',
-            target: 'instafeed',
-            numOfPics: 12,
-            caption: true
-        });
-    }
+	var $nav = $('header.navigation');
+	var $scroll = $(window).scrollTop();
+	if($scroll >= 100) {
+		if(!$nav.hasClass('scrolled')) {
+			$nav.addClass('scrolled');
+		}
+	} else {
+		if($nav.hasClass('scrolled')) {
+			$nav.removeClass('scrolled');
+		}
+	}
 }
 
-function instafetcher()
+function lazyImages()
 {
-    if($('#instafetcher').length !== 0) {
-        var $num = 32;
-        instafetch.init({
-            accessToken: '3954768309.1677ed0.30788a5d18984b86b98b23a114a6cb4c',
-            target: 'instafetcher',
-            numOfPics: $num,
-            caption: true
-        });
-        // $('#instafetcher').next('.load-more').on('click', function() {
-        //     $('#instafetcher').children().wrapAll( "<div class='hidden'></div>" );
-        //     $num = $num + 32;
-        //     instafetch.init({
-        //         accessToken: '3954768309.1677ed0.30788a5d18984b86b98b23a114a6cb4c',
-        //         target: 'instafetcher',
-        //         numOfPics: $num,
-        //         caption: true
-        //     });
-        //     $('#instafetcher').find('.hidden').fadeOut(200);
-        // });
-    }
+	$('.lazy').each(function() {
+		var $src = $(this).data('src');
+		$(this).attr('src', $src).removeAttr('data-src');	
+	});
 }
 
 
 $(document).ready(function() {
-    subMenuToggle();
-    mobileMenuOpen();
-    mobileMenuClose();
-    instafeed();
-    instafetcher();
+    
+});
+
+$(window).on('load', function() {
+    lazyImages();
+});
+
+$(window).on('load scroll', function() {
+	menuScroll();
 });
