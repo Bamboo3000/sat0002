@@ -64,7 +64,92 @@
     }
 
     &__info {
-        margin-top: 20px;
+        margin-top: 30px;
+
+        p {
+            margin: 0;
+        }
+
+        .list {
+            //padding-left: 100px;]
+            text-align: center;
+
+            span {
+                font-weight: 700;
+            }
+
+            ul {
+                margin: 10px 0 0 0;
+                padding: 0;
+                font-size: 14px;
+
+                li {
+                    font-size: 14px;
+                    line-height: 1.5;
+
+                    a:hover {
+                        text-decoration: none;
+                        color: $color-secondary;
+                    }
+
+                }
+
+            }
+
+        }
+
+        .connect {
+
+            > span {
+                font-weight: 700;
+            }
+
+            > .row {
+                margin-top: 20px;
+            }
+
+            a {
+                display: inline-block;
+                margin: 0 0 10px 10px;
+
+                &.btn {
+                    margin-top: 20px;
+                }
+
+                i {
+                    background-color: white;
+                    border-radius: 100px;
+                    height: 36px;
+                    width: 36px;
+                    text-align: center;
+                    font-size: 24px;
+                    line-height: 36px;
+                    margin: 0 auto;
+                    display: inline-block;
+                    vertical-align: middle;
+                    color: $color-primary;
+                    @include trans(200ms);
+                }
+
+                span {
+                    display: none;
+                    @include trans(200ms);
+                }
+    
+                &:hover {
+                    text-decoration: none;
+    
+                    i,
+                    span {
+                        color: $color-secondary;
+                    }
+    
+                }
+    
+            }
+
+        }
+
     }
 
     &__address {
@@ -98,6 +183,12 @@
         margin-top: 32px;
         padding: 18px 0 20px;
         background-color: #170e31;
+
+        a:hover {
+            color: $color-secondary;
+            text-decoration: none;
+        }
+
     }
 
 }
