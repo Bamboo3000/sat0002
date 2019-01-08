@@ -4,6 +4,7 @@
     left: 0;
     right: 0;
     display: block;
+    max-height: 88px;
     padding-top: 20px;
     padding-bottom: 20px;
     box-shadow: 0 3px 3px -3px rgba(0,0,0,.1);
@@ -11,9 +12,45 @@
     background-color: white;
     @include trans(200ms);
 
+    &.home {
+        background-color: transparent;
+        box-shadow: 0 3px 3px -3px rgba(0,0,0,0);
+
+        .navigation__menu {
+
+            li {
+    
+                a {
+                    color: white;
+
+                    &:hover {
+                        color: $color-secondary;
+                        text-decoration: none;
+                    }
+
+                }
+    
+            }
+
+        }
+
+        .logo {
+            display: none;
+            opacity: 0;
+
+            &.home {
+                display: block!important;
+                opacity: 1;
+            }
+
+        }
+
+    }
+
     &.scrolled {
         padding-top: 6px;
         padding-bottom: 6px;
+        max-height: 60px;
     }
 
     &__container {
@@ -23,6 +60,12 @@
     .logo {
         text-align: center;
         margin-top: -4px;
+        opacity: 1;
+
+        &.home {
+            display: none;
+            opacity: 0;
+        }
 
         object,
         svg {

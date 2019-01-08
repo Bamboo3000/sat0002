@@ -265,11 +265,11 @@ function menuScroll()
 	var $scroll = $(window).scrollTop();
 	if($scroll >= 100) {
 		if(!$nav.hasClass('scrolled')) {
-			$nav.addClass('scrolled');
+			$nav.addClass('scrolled').removeClass('home');
 		}
 	} else {
 		if($nav.hasClass('scrolled')) {
-			$nav.removeClass('scrolled');
+			$nav.removeClass('scrolled').addClass('home');
 		}
 	}
 }
