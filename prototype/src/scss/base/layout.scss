@@ -73,6 +73,17 @@ label {
 	font-family: $font-primary;
 }
 
+hr {
+	border: none;
+	outline: 0;
+	display: block;
+	margin: 36px auto;
+	width: 128px;
+	height: 7px;
+	border-radius: 7px;
+	@include gradientA($color-tertiary, $color-secondary);
+}
+
 section {
 	width: 100%;
 	position: relative;

@@ -82,15 +82,28 @@
         align-content: center;
         align-items: flex-end;
         margin-bottom: 0px;
+        margin-right: 16px;
         padding: 0;
 
+        &-cont {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            align-content: flex-end;
+
+            .btn {
+                margin: 0;
+            }
+
+        }
+
         li {
-            padding: 8px 7px 6px;
+            padding: 8px 4px 6px;
             position: relative;
 
             a {
                 display: block;
-                padding: 8px 12px;
+                padding: 8px;
                 font-size: 16px;
                 line-height: 1;
                 font-weight: 500;
@@ -99,7 +112,8 @@
                 border-radius: 5px;
                 border: 1px solid transparent;
 
-                &:hover {
+                &:hover,
+                &.active {
                     color: $color-secondary;
                     text-decoration: none;
                 }

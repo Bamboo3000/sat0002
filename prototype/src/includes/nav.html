@@ -11,23 +11,26 @@
                     <img src="assets/img/logo_white.svg" alt="Sative logo">
                 </object>
             </a>
-            <ul class="navigation__menu">
-                <li>
-                    <a href="about.html">About us</a>
-                </li>
-                <li>
-                    <a href="expertise.html">Expertise</a>
-                </li>
-                <li>
-                    <a href="work.html">Our work</a>
-                </li>
-                <li>
-                    <a href="news.html">News</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-            </ul>
+            <div class="col-9 navigation__menu-cont">
+                <ul class="navigation__menu">
+                    <li>
+                        <a href="javascript:void(0)" onclick="slideTo('#about')" data-href="#about">About us</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" onclick="slideTo('#expertise')" data-href="#expertise">Expertise</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" onclick="slideTo('#portfolio')" data-href="#portfolio">Portfolio</a>
+                    </li>
+                    <!-- <li>
+                        <a href="news.html">News</a>
+                    </li> -->
+                    <li>
+                        <a href="javascript:void(0)" onclick="slideTo('#contact')" data-href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <a href="javascript:void(0)" onclick="slideTo('#contact')" class="btn btn__colorS vsmall">ask for a quote</a>
+            </div>
         </nav>
     </div>
 </header>

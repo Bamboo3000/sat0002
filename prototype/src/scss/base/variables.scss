@@ -31,7 +31,7 @@ $font-secondary: 'Roboto Slab', serif;
 }
 
 @mixin gradientA($c1, $c2) {
-    background: rgb($c1);
+    background: $c1;
     background: -moz-linear-gradient(150deg, $c1 0%, $c2 100%);
     background: -webkit-linear-gradient(150deg, $c1 0%, $c2 100%);
     background: linear-gradient(150deg, $c1 0%, $c2 100%);
@@ -46,6 +46,10 @@ $font-secondary: 'Roboto Slab', serif;
     background-color: black;
 }
 
-.no-padding {
+.nopadding {
     padding: 0!important;
+}
+
+.nomargin {
+	margin: 0!important;
 }

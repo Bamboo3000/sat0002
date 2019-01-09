@@ -44,7 +44,7 @@ function hasClass(el, cls)
 function slideTo(el)
 {
 	$('html, body').animate({
-		scrollTop: $(el).offset().top
+		scrollTop: $(el).offset().top - 60
 	}, 500);
 }
 
@@ -282,9 +282,18 @@ function lazyImages()
 	});
 }
 
+function wpoints()
+{
+    var waypoints = $('section').waypoint(function(direction) {
+        $('header.navigation').find('a[data-href="#'+this.element.id+'"]').addClass('active');
+     }, {
+        offset: 60
+    });
+}
+
 
 $(document).ready(function() {
-    
+    wpoints();
 });
 
 $(window).on('load', function() {

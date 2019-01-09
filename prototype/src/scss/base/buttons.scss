@@ -10,14 +10,41 @@
 	height: auto!important;
 	letter-spacing: 0.5px;
 
+	&:hover {
+		@include shadowVMore;
+		transform: translateY(-5px);
+	}
+
 	&.small {
 		margin: 0 auto;
 		padding: 7px 24px!important;
 		font-size: 17px;
 
+		&:hover {
+			@include shadowVMore;
+			transform: translateY(-4px);
+		}
+
 		@media(max-width: 767px) {
 			padding: 6px 18px!important;
 			font-size: 16px;
+		}
+
+	}
+
+	&.vsmall {
+		margin: 0 auto;
+		padding: 5px 18px!important;
+		font-size: 15px;
+
+		&:hover {
+			@include shadowVMore;
+			transform: translateY(-3px);
+		}
+
+		@media(max-width: 767px) {
+			padding: 4px 12px!important;
+			font-size: 14px;
 		}
 
 	}
@@ -63,18 +90,12 @@
 		padding: 9px 36px 10px!important;
 		border: 3px solid $color-secondary;
 		font-size: 18px;
-		color: white;
+		color: white!important;
 		background-color: $color-secondary;
 
 		@media(max-width: 767px) {
 			padding: 7px 28px!important;
 			font-size: 17px;
-		}
-
-		&:hover {
-			color: white;
-			@include shadowVMore;
-			transform: translateY(-5px);
 		}
 
 	}
@@ -85,18 +106,12 @@
 		padding: 9px 36px 10px!important;
 		border: 3px solid $color-tertiary;
 		font-size: 18px;
-		color: white;
+		color: white!important;
 		background-color: $color-tertiary;
 
 		@media(max-width: 767px) {
 			padding: 7px 28px!important;
 			font-size: 17px;
-		}
-
-		&:hover {
-			color: white;
-			@include shadowVMore;
-			transform: translateY(-5px);
 		}
 
 	}
