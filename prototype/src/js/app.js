@@ -284,7 +284,8 @@ function lazyImages()
 
 function wpoints()
 {
-    var waypoints = $('section').waypoint(function(direction) {
+    var waypoints = $('section, header').waypoint(function(direction) {
+        $('header.navigation').find('a').removeClass('active');
         $('header.navigation').find('a[data-href="#'+this.element.id+'"]').addClass('active');
      }, {
         offset: 60

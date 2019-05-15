@@ -82,6 +82,11 @@ hr {
 	height: 7px;
 	border-radius: 7px;
 	@include gradientA($color-tertiary, $color-secondary);
+
+	&.left {
+		margin: 36px 0;
+	}
+
 }
 
 section {

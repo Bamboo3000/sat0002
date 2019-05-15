@@ -6,7 +6,7 @@
 
         .cambridge {
             position: absolute;
-            left: 0;
+            left: 80px;
             bottom: 0;
             z-index: 0;
             opacity: 0.75;
@@ -15,8 +15,8 @@
 
         .earth {
             position: absolute;
-            right: 100px;
-            top: 50px;
+            right: 80px;
+            top: 40px;
             z-index: 0;
             opacity: 0.85;
             max-width: 256px;
@@ -26,7 +26,7 @@
 
     &__expertise {
         background-color: #f1f1f1;
-        padding: 96px 0; 
+        padding: 128px 0; 
     }
 
 }
