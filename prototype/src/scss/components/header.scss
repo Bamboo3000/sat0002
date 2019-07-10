@@ -10,6 +10,15 @@
         > .container {
             padding-top: 120px;
             padding-bottom: 120px;
+
+            @media(max-width: 575px) {
+                
+                * {
+                    text-align: center!important;
+                }
+
+            }
+
         }
 
         // &-title {
