@@ -44,8 +44,8 @@ function hasClass(el, cls)
 function slideTo(el)
 {
 	$('html, body').animate({
-		scrollTop: $(el).offset().top - 60
-	}, 500);
+		scrollTop: $(el).offset().top - 49
+	}, 600);
 }
 
 function initContactMap()
@@ -292,9 +292,36 @@ function wpoints()
     });
 }
 
+function placeholder()
+{
+    $(document).on('focusin', 'input, select, textarea', function() {
+        $(this).addClass('active').next('.select, .placeholder').addClass('hide');
+    });
+    $(document).on('focusout', 'input, select, textarea', function() {
+        if(!$(this).val()) {
+            $(this).removeClass('active').next('.select, .placeholder').removeClass('hide');
+        }
+    });
+    $(document).on('click', 'select', function() {
+        if(!$(this).val()) {
+            $(this).removeClass('active').next('.select, .placeholder').removeClass('hide');
+        } else {
+            $(this).addClass('active').next('.select, .placeholder').addClass('hide');
+        }
+    });
+    $(document).on('change', 'select', function() {
+        if(!$(this).val()) {
+            $(this).removeClass('active').next('.select, .placeholder').removeClass('hide');
+        } else {
+            $(this).addClass('active').next('.select, .placeholder').addClass('hide');
+        }
+    });
+}
+
 
 $(document).ready(function() {
-    wpoints();
+    //wpoints();
+    placeholder();
 });
 
 $(window).on('load', function() {

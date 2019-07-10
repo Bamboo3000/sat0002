@@ -7,19 +7,19 @@ $font-primary: 'Roboto', sans-serif;
 $font-secondary: 'Roboto Slab', serif;
 
 @mixin shadow() {
-    box-shadow: 2px 2px 7px 0 rgba($color: #000000, $alpha: 0.3);
+    box-shadow: 2px 2px 7px 0 rgba($color: #000000, $alpha: 0.3)!important;
 }
 
 @mixin shadowV() {
-    box-shadow: 0 2px 7px 0 rgba($color: #000000, $alpha: 0.3);
+    box-shadow: 0 2px 7px 0 rgba($color: #000000, $alpha: 0.3)!important;
 }
 
 @mixin shadowMore() {
-    box-shadow: 3px 3px 10px 0 rgba($color: #000000, $alpha: 0.4);
+    box-shadow: 3px 3px 10px 0 rgba($color: #000000, $alpha: 0.4)!important;
 }
 
 @mixin shadowVMore() {
-    box-shadow: 0 3px 10px 0 rgba($color: #000000, $alpha: 0.4);
+    box-shadow: 0 3px 10px 0 rgba($color: #000000, $alpha: 0.4)!important;
 }
 
 @mixin gradient($c1, $c2) {

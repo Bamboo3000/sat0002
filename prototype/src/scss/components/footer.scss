@@ -5,6 +5,14 @@
     position: relative;
     color: white;
 
+    @media(max-width: 575px) {
+
+        * {
+            text-align: center!important;
+        }
+
+    }
+
     &__logo {
 
         a {
@@ -98,7 +106,27 @@
 
         }
 
+        .bio {
+
+            @media(max-width: 575px) {
+                order: 100!important;
+            }
+
+        }
+
         .connect {
+
+            @media(max-width: 767px) {
+                text-align: left!important;
+                margin-top: 30px;
+            }
+
+            @media(max-width: 575px) {
+                text-align: center!important;
+                order: 1!important;
+                margin-top: 0;
+                margin-bottom: 30px;
+            }
 
             > span {
                 font-weight: 700;
@@ -111,6 +139,10 @@
             a {
                 display: inline-block;
                 margin: 0 0 10px 10px;
+
+                @media(max-width: 767px) {
+                    margin: 0 10px 10px 0;
+                }
 
                 &.btn {
                     margin-top: 20px;
@@ -147,6 +179,23 @@
                     i,
                     span {
                         color: $color-secondary;
+
+                        &.fa-facebook-f {
+                            color: #3b5998;
+                        }
+    
+                        &.fa-twitter {
+                            color: #1da1f2;
+                        }
+    
+                        &.fa-linkedin-in {
+                            color: #007bb5;
+                        }
+    
+                        &.fa-instagram {
+                            color: #c32aa3;
+                        }
+
                     }
     
                 }
@@ -188,6 +237,15 @@
         margin-top: 32px;
         padding: 18px 0 20px;
         background-color: #170e31;
+
+        @media(max-width: 575px) {
+            padding: 12px 0;
+
+            * {
+                text-align: center!important;
+            }
+
+        }
 
         a:hover {
             color: $color-secondary;

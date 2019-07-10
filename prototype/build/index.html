@@ -26,10 +26,11 @@
             <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Roboto:300,300i,400,400i,500,500i,700,900" rel="stylesheet">
         </noscript>
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">
+        <script src="https://kit.fontawesome.com/7acc43e0e6.js" async defer></script>
+        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">
         <noscript>
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-        </noscript>
+        </noscript> -->
         <!-- Custom CSS -->
         <link rel="stylesheet" href="assets/css/prototype.css">
     </head>
@@ -41,19 +42,21 @@
 <header class="navigation home">
     <div class="container">
         <nav class="row navigation__container justify-content-between align-items-center">
-            <a href="index.html" class="logo" title="Sative">
-                <object type="image/svg+xml" data="assets/img/logo_pu.svg">
-                    <img src="assets/img/logos/logoPUlowres.png" alt="Sative logo">
-                </object>
-            </a>
-            <a href="index.html" class="logo home" title="Sative">
-                <object type="image/svg+xml" data="assets/img/logo_white.svg">
-                    <img src="assets/img/logos/logoWHITElowres.png" alt="Sative logo">
-                </object>
-            </a>
-            <div class="col-9 navigation__menu-cont">
+            <div class="col-md-4 col-sm-3 col-5 logos">
+                <a href="index.html" class="logo" title="Sative">
+                    <object type="image/svg+xml" data="assets/img/logo_pu.svg">
+                        <img src="assets/img/logos/logoPUlowres.png" alt="Sative logo">
+                    </object>
+                </a>
+                <a href="index.html" class="logo home" title="Sative">
+                    <object type="image/svg+xml" data="assets/img/logo_white.svg">
+                        <img src="assets/img/logos/logoWHITElowres.png" alt="Sative logo">
+                    </object>
+                </a>
+            </div>
+            <div class="col-md-8 col-sm-9 col-7 navigation__menu-cont">
                 <ul class="navigation__menu">
-                    <li>
+                    <!-- <li>
                         <a href="javascript:void(0)" onclick="slideTo('#about')" data-href="#about">About us</a>
                     </li>
                     <li>
@@ -62,11 +65,31 @@
                     <li>
                         <a href="javascript:void(0)" onclick="slideTo('#portfolio')" data-href="#portfolio">Portfolio</a>
                     </li>
-                    <!-- <li>
+                    <li>
                         <a href="news.html">News</a>
-                    </li> -->
+                    </li>
                     <li>
                         <a href="javascript:void(0)" onclick="slideTo('#contact')" data-href="#contact">Contact</a>
+                    </li> -->
+                    <li>
+                        <a class="social" href="https://www.facebook.com/Sative-125988684742141/" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="social" href="https://www.linkedin.com/company/sative/" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="social" href="https://twitter.com/SativeLtd" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="social" href="https://www.instagram.com/sative_agency/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </li>
                 </ul>
                 <a href="javascript:void(0)" onclick="slideTo('#contact')" class="btn btn__colorS vsmall">ask for a quote</a>
@@ -89,19 +112,21 @@
                     <h1 class="text-size-xlarge">
                         Sative is an interactive agency that creates beautiful websites and mobile applications.
                     </h1>
-                    <p class="text-size-large">
-                        We are constantly striving to create the best, the fastest and the most user friendly web pages, ecommerce platforms and mobile apps. There is nothing more important to us than succesful project and happines of our clients.
+                    <p class="text-size-large temp">
+                        We are currently re-working our website... <br/>
+                        Until we make the new website, please, drop us a line at <a href="mailto:office@sative.co.uk">office@sative.co.uk</a> in order to get an access to our latest work...
                     </p>
                 </div>
                 <a href="javascript:void(0)" onclick="slideTo('#contact')"  class="btn btn__colorS">
-                    See what we can do for you!
+                    Get in touch now!
                 </a>
             </div>
         </div>
     </div>
+    <i class="fas fa-angle-double-down slideTo" onclick="slideTo('#contact')"></i>
 </header>
 
-<section id="about" class="home__about">
+<!--<section id="about" class="home__about">
     <div class="cambridge">
         <img data-src="assets/img/cambridge_skyline.png" alt="" class="lazy" width="580">
     </div>
@@ -148,38 +173,95 @@
             </div>
         </div>
     </div>
+</section>-->
+
+<section class="home__contact" id="contact">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7 col-md-10 col-12 text-center">
+                <h2 class="home__contact-title">Contact us and tell something about your project</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-7 col-sm-9 col-12 home__contact-form">
+                <form action="">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="input-wrap">
+                                <input type="text" name="name" minlength="3" required>
+                                <label class="placeholder" for="name">Full name <span>*</span></label>
+                                <i class="far fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="input-wrap">
+                                <input type="email" name="email" minlength="5" required>
+                                <label class="placeholder" for="email">Email address <span>*</span></label>
+                                <i class="far fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="input-wrap">
+                                <input type="text" name="phone" minlength="9">
+                                <label class="placeholder" for="phone">Phone number <small>(optional)</small></label>
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="input-wrap">
+                                <select name="budget">
+                                    <option value="" disabled selected>Your budget brackets</option>
+                                    <option value="<1k">less than £1.000</option>
+                                    <option value="1k-3k">£1.000 - £3.000</option>
+                                    <option value="3k-10k">£3.000 - £10.000</option>
+                                    <option value="10k-20k">£10.000 - £20.000</option>
+                                    <option value="20k-50k">£20.000 - £50.000</option>
+                                    <option value="50k-100k">£50.000 - £100.000</option>
+                                    <option value="100k>">more than £100.000</option>
+                                </select>
+                                <label class="placeholder" for="budget">Your budget brackets <small>(optional)</small></label>
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="input-wrap input-wrap-textarea">
+                                <textarea name="description" minlength="10" required></textarea>
+                                <label class="placeholder" for="description">Tell us what you plan to do <span>*</span></label>
+                                <i class="far fa-comment-dots"></i>
+                            </div>
+                        </div>
+                        <div class="col-12 checkbox">
+                            <label class="checkmark__container">
+                                <small>I've read and agree to the <a href="/cookies">privacy policy</a>.</small>
+                                <input type="checkbox" name="agree" required>
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn__gradient btn__oval small"><i class="far fa-paper-plane"></i> Send your enquiry</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </section>
 
             <footer class="footer">
                 <div class="footer__container container">
                     <div class="row align-items-end">
-                        <div class="col-md-2 align-self-end footer__logo">
+                        <div class="col-lg-2 col-md-3 align-self-end footer__logo">
                             <a href="index.html" title="Sative">
                                 <object type="image/svg+xml" data="assets/img/logo_white.svg">
                                     <img src="assets/img/logo.png" alt="Sative logo">
                                 </object>
                             </a>
                         </div>
-                        <div class="col-md-3 align-self-end footer__social">
-                            <!-- <a href="" target="_blank">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="" target="_blank">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="" target="_blank">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                            </a> -->
-                        </div>
-                        <div class="col-md-7 text-right">
-                            
-                        </div>
+                        <div class="col-md-3 align-self-end footer__social"></div>
+                        <div class="col-md-7 text-right"></div>
                     </div>
                     <div class="row footer__info justify-content-between">
-                        <div class="col-md-5">
+                        <div class="col-xl-5 col-lg-6 col-md-7 bio">
                             <p class="text-size-small">
                                 Founded in 2016 by Jakub & Magdalena Pabis. Sative is a Cambridge based Design, Interactive and Digital agency offering a worldwide service.
                             </p>
@@ -195,7 +277,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-md list">
+                        <!--<div class="col-md list">
                             <span>Sitemap</span>
                             <ul>
                                 <li>
@@ -217,21 +299,21 @@
                                     <a href="">Contact</a>
                                 </li>
                             </ul>
-                        </div>
+                        </div>-->
                         <div class="col-md connect text-right">
                             <span>Connect with us!</span>
                             <div class="row">
                                 <div class="col-12">
-                                    <a class="social" href="" target="_blank">
+                                    <a class="social" href="https://www.facebook.com/Sative-125988684742141/" target="_blank">
                                         <i class="fab fa-facebook-f"></i>
                                     </a>
-                                    <a class="social" href="" target="_blank">
+                                    <a class="social" href="https://twitter.com/SativeLtd" target="_blank">
                                         <i class="fab fa-twitter"></i>
                                     </a>
-                                    <a class="social" href="" target="_blank">
+                                    <a class="social" href="https://www.linkedin.com/company/sative/" target="_blank">
                                         <i class="fab fa-linkedin-in"></i>
                                     </a>
-                                    <a class="social" href="" target="_blank">
+                                    <a class="social" href="https://www.instagram.com/sative_agency/" target="_blank">
                                         <i class="fab fa-instagram"></i>
                                     </a>
                                 </div>
@@ -245,11 +327,11 @@
                 <div class="footer__bottom text-size-small">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-sm-6 col-12">
                                 Copyright &copy; 2019 Sative Ltd.
                             </div>
-                            <div class="col-md-6 text-right">
-                                <a href="">Cookies & Privacy Policy</a>
+                            <div class="col-sm-6 col-12 text-right">
+                                <a href="/cookies">Cookies & Privacy Policy</a>
                             </div>
                         </div>
                     </div>
