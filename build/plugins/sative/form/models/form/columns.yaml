@@ -1,0 +1,16 @@
+columns:
+    id:
+        label: id
+        type: number
+    name:
+        label: name
+        type: text
+    phone:
+        label: phone
+        type: text
+    email:
+        label: email
+        type: text
+    budget:
+        label: budget
+        type: text

@@ -1,0 +1,37 @@
+fields:
+    name:
+        label: Name
+        span: left
+        readOnly: 1
+        type: text
+    phone:
+        label: Phone
+        span: right
+        readOnly: 1
+        type: text
+    email:
+        label: Email
+        span: left
+        readOnly: 1
+        hidden: 0
+        type: text
+    budget:
+        label: Budget
+        options:
+            '<1k': 'less than £1.000'
+            1k-3k: '£1.000 - £3.000'
+            3k-10k: '£3.000 - £10.000'
+            10k-20k: '£10.000 - £20.000'
+            20k-50k: '£20.000 - £50.000'
+            50k-100k: '£50.000 - £100.000'
+            100k>: 'more than £100.000'
+        showSearch: true
+        span: right
+        readOnly: 1
+        type: dropdown
+    description:
+        label: Description
+        size: large
+        span: left
+        readOnly: 1
+        type: textarea
