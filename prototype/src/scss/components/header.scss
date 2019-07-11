@@ -1,82 +1,85 @@
 .header {
+    color: white;
+    display: flex;
+    position: relative;
+    margin-top: -88px;
+
+    > .container {
+        padding-top: 120px;
+        padding-bottom: 120px;
+
+        @media(max-width: 575px) {
+            
+            * {
+                text-align: center!important;
+            }
+
+        }
+
+    }
+
+    // &-title {
+        
+    //     span {
+    //         background: linear-gradient(150deg, $color-tertiary, $color-secondary);
+    //         -webkit-background-clip: text;
+    //         -webkit-text-fill-color: transparent;
+    //     }
+
+    // }
+
+    .slideTo {
+        width: 64px;
+        height: 64px;
+        line-height: 64px;
+        position: absolute;
+        display: block;
+        bottom: 32px;
+        left: 50%;
+        margin-left: -32px;
+        text-align: center;
+        font-size: 36px;
+        animation: pulse 1.6s infinite; 
+        cursor: pointer;
+        text-shadow: 0 5px 10px rgba(0, 0, 0, 0);
+        @include trans(200ms);
+        
+        &:hover {
+            color: $color-secondary;
+            text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+    }
+
+    &-text {
+        margin: 24px 0 16px;
+
+        a {
+            color: $color-secondary;
+            font-weight: 700;
+            padding: 3px 12px;
+            background-color: white;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(16px);
+        }
+    }
 
     &__main {
         min-height: 100vh;
-        color: white;
-        display: flex;
-        position: relative;
-        margin-top: -88px;
+    }
 
-        > .container {
-            padding-top: 120px;
-            padding-bottom: 120px;
-
-            @media(max-width: 575px) {
-                
-                * {
-                    text-align: center!important;
-                }
-
-            }
-
-        }
-
-        // &-title {
-            
-        //     span {
-        //         background: linear-gradient(150deg, $color-tertiary, $color-secondary);
-        //         -webkit-background-clip: text;
-        //         -webkit-text-fill-color: transparent;
-        //     }
-
-        // }
-
-        &-text {
-            margin: 24px 0 16px;
-
-            a {
-                color: $color-secondary;
-                font-weight: 700;
-                padding: 3px 12px;
-                background-color: white;
-                border-radius: 6px;
-                font-size: 16px;
-            }
-
-        }
-
-        .slideTo {
-            width: 64px;
-            height: 64px;
-            line-height: 64px;
-            position: absolute;
-            display: block;
-            bottom: 32px;
-            left: 50%;
-            margin-left: -32px;
-            text-align: center;
-            font-size: 36px;
-            animation: pulse 1.6s infinite; 
-            cursor: pointer;
-            text-shadow: 0 5px 10px rgba(0, 0, 0, 0);
-            @include trans(200ms);
-            
-            &:hover {
-                color: $color-secondary;
-                text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-            }
-
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(16px);
-            }
-        }
-
+    &__normal {
+        min-height: 50vh;
     }
 
 }

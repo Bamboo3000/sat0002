@@ -1,0 +1,65 @@
+title = "Home"
+url = "/"
+meta_title = "Sative - interactive agency that creates beautiful websites and mobile applications."
+meta_description = "We are a creative agency based in Cambridge. We create beautiful websites and mobile applications which simply work!"
+is_hidden = 0
+
+[form]
+==
+{% partial 'head' %}
+{% partial 'nav' %}
+
+    <header class="header header__main align-items-center">
+        <picture class="bg-cover-abs">
+            <source class="lazyset" data-src="{{ 'assets/img/header2.jpg'|theme }}" media="(min-width: 992px)" type="image/jpeg">
+            <img class="bg-cover-abs lazy" data-src="{{ 'assets/img/header2.jpg'|theme }}" alt="">
+        </picture>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h2 class="text-size-xxxxlarge">
+                        WE code, YOU grow!
+                    </h2>
+                    <div class="header-text text-size-large">
+                        <h1 class="text-size-xlarge">
+                            Sative is an interactive agency that creates beautiful websites and mobile applications.
+                        </h1>
+                        <p class="text-size-large temp">
+                            We are currently re-working our website... <br/>
+                            Until we make the new website, please, drop us a line at <a href="mailto:office@sative.co.uk">office@sative.co.uk</a> in order to get an access to our latest work...
+                        </p>
+                    </div>
+                    <a href="javascript:void(0)" onclick="slideTo('#contact')"  class="btn btn__colorS">
+                        Get in touch now!
+                    </a>
+                </div>
+            </div>
+        </div>
+        <i class="fas fa-angle-double-down slideTo" onclick="slideTo('#contact')"></i>
+    </header>
+
+    <section class="home__contact" id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-12 text-center">
+                    <h2 class="home__contact-title">Contact us and tell something about your project</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div id="regForm" class="col-lg-5 col-md-7 col-sm-9 col-12 home__contact-form">
+                    {% partial 'form' %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% flash %}
+        <p
+            data-control="flash-message"
+            class="flash-message fade {{ type }}"
+            data-interval="30">
+            {{ message }}
+        </p>
+    {% endflash %}
+
+{% partial 'footer' %}

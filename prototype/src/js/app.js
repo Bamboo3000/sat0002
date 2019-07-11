@@ -276,21 +276,25 @@ function menuScroll()
 
 function lazyImages()
 {
+	$('.lazyset').each(function() {
+		var $src = $(this).data('srcset');
+		$(this).attr('srcset', $src).removeAttr('data-src');	
+    });
 	$('.lazy').each(function() {
 		var $src = $(this).data('src');
 		$(this).attr('src', $src).removeAttr('data-src');	
-	});
-}
-
-function wpoints()
-{
-    var waypoints = $('section, header').waypoint(function(direction) {
-        $('header.navigation').find('a').removeClass('active');
-        $('header.navigation').find('a[data-href="#'+this.element.id+'"]').addClass('active');
-     }, {
-        offset: 60
     });
 }
+
+// function wpoints()
+// {
+//     var waypoints = $('section, header').waypoint(function(direction) {
+//         $('header.navigation').find('a').removeClass('active');
+//         $('header.navigation').find('a[data-href="#'+this.element.id+'"]').addClass('active');
+//      }, {
+//         offset: 60
+//     });
+// }
 
 function placeholder()
 {

@@ -53,6 +53,11 @@
                 margin-top: 20px;
                 padding: 0;
 
+                .validation {
+                    color: $color-secondary!important;
+                    font-weight: 700;
+                }
+
                 .input-wrap {
                     @include gradientA($color-tertiary, $color-secondary);
                     border-radius: 50px;

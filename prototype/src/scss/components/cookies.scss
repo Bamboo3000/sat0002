@@ -1,0 +1,17 @@
+.cookies {
+
+    &__policy {
+        padding: 72px 0 96px;
+
+        @media(max-width: 767px) {
+            padding: 56px 0 72px;
+        }
+
+        a {
+            text-decoration: underline;
+            color: $color-tertiary;
+        }
+
+    }
+
+}
