@@ -51,7 +51,11 @@
                         </a>
                     </li>
                 </ul>
-                <a href="javascript:void(0)" onclick="slideTo('#contact')" class="btn btn__colorS vsmall">ask for a quote</a>
+                {% if ''| page(false) == url('/') %}
+                    <a href="javascript:void(0)" onclick="slideTo('#contact')" class="btn btn__colorS vsmall">ask for a quote</a> 
+                {% else %}
+                    <a href="/#contact" class="btn btn__colorS vsmall">ask for a quote</a>
+                {% endif %}
             </div>
         </nav>
     </div>
